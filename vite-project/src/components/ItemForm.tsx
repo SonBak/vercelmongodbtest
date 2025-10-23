@@ -7,7 +7,7 @@ const ItemForm = () => {
 
   const createItem = async () => {
     try {
-      await axios.post("https://vercelmongodbtest.vercel.app/api/items", {
+      await axios.post("https://vercelmongodbtest.vercel.app/items", {
         name,
         quantity,
       });
