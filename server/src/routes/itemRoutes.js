@@ -12,7 +12,7 @@ import {
   updateItemById,
   deleteManyItems,
   deleteItemById,
-} from "../controllers/itemController";
+} from "../controllers/itemController.js";
 
 const router = express.Router();
 router.get("/items", getAllItems);
