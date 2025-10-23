@@ -7,7 +7,10 @@ const ItemForm = () => {
 
   const createItem = async () => {
     try {
-      await axios.post("http://localhost:5000/items", { name, quantity });
+      await axios.post("https://vercelmongodbtest.vercel.app/api/items", {
+        name,
+        quantity,
+      });
       alert("Item created!");
     } catch (err) {
       console.error("Failed to create item:", err);

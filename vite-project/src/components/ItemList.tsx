@@ -12,7 +12,9 @@ const ItemList = () => {
 
   const fetchItems = async () => {
     try {
-      const response = await axios.get<Item[]>("http://localhost:5000/items");
+      const response = await axios.get<Item[]>(
+        "https://vercelmongodbtest.vercel.app/api/items"
+      );
       setItems(response.data);
     } catch (err) {
       console.error("Failed to fetch items:", err);
@@ -21,7 +23,9 @@ const ItemList = () => {
 
   const deleteItem = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:5000/items/${id}`);
+      await axios.delete(
+        `https://vercelmongodbtest.vercel.app/api/items/${id}`
+      );
       fetchItems();
     } catch (err) {
       console.error("Failed to delete item:", err);
