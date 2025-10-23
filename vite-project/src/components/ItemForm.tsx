@@ -36,9 +36,9 @@ const ItemForm = () => {
       <label>
         Quantity:
         <input
-          type="text"
+          type="number"
           value={quantity}
-          onChange={(e) => setQuantity(parseInt(e.target.value))}
+          onChange={(e) => setQuantity(parseInt(e.target.value) || 1)}
           required
         />
       </label>
