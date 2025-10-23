@@ -9,6 +9,12 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Test route
+app.get("/test", (req, res) => {
+  res.json({ message: "Server is working!" });
+});
+
 app.use(router);
 
 mongoose
